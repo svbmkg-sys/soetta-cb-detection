@@ -1,0 +1,17 @@
+THRESHOLD ANALYSIS SUMMARY
+================================================================================
+
+Threshold diuji dari 0.10 sampai 0.90 dengan interval 0.01.
+Evaluasi dilakukan menggunakan data uji tahun 2024.
+
+Rekomendasi threshold:
+ model  best_f1_threshold  best_f1_score  best_csi_threshold  best_csi  operational_threshold  operational_pod  operational_far  operational_f1  operational_accuracy         operational_note
+   DNN               0.41       0.713415                0.41  0.554502                   0.54         0.756654         0.351792        0.698246              0.719870 POD >= 0.75, FAR minimum
+1D-CNN               0.30       0.684444                0.30  0.520270                   0.41         0.752852         0.400000        0.667791              0.679153 POD >= 0.75, FAR minimum
+   TCN               0.38       0.703976                0.38  0.543182                   0.49         0.760456         0.388379        0.677966              0.690554 POD >= 0.75, FAR minimum
+
+Catatan:
+- best_f1_threshold adalah threshold dengan F1-score tertinggi.
+- best_csi_threshold adalah threshold dengan Critical Success Index tertinggi.
+- operational_threshold dipilih dengan kriteria POD >= 0.75 dan FAR minimum.
+- Jika tidak ada threshold yang memenuhi POD >= 0.75, digunakan threshold dengan F1-score tertinggi.

@@ -1,0 +1,41 @@
+{
+    "sounding_file": "sounding_indices_96749_full.xlsx",
+    "synop_file": "sinop_01.xlsx",
+    "n_rows": 3012,
+    "period_start": "2020-01-01 12:00:00",
+    "period_end": "2024-12-31 12:00:00",
+    "label_columns": [
+        "cb_h3",
+        "cb_h6",
+        "cb_h12"
+    ],
+    "main_label": "cb_h12",
+    "feature_columns": [
+        "Showalter index",
+        "Lifted index",
+        "LIFT computed using virtual temperature",
+        "SWEAT index",
+        "K index",
+        "Cross totals index",
+        "Vertical totals index",
+        "Totals totals index",
+        "Convective Available Potential Energy",
+        "CAPE using virtual temperature",
+        "Convective Inhibition",
+        "CINS using virtual temperature",
+        "Equilibrum Level",
+        "Equilibrum Level using virtual temperature",
+        "Level of Free Convection",
+        "LFCT using virtual temperature",
+        "Bulk Richardson Number",
+        "Bulk Richardson Number using CAPV",
+        "Temp [K] of the Lifted Condensation Level",
+        "Pres [hPa] of the Lifted Condensation Level",
+        "Equivalent potential temp [K] of the LCL",
+        "Mean mixed layer potential temperature",
+        "Mean mixed layer mixing ratio",
+        "1000 hPa to 500 hPa thickness",
+        "Precipitable water [mm] for entire sounding"
+    ],
+    "n_features": 25
+}

@@ -1,0 +1,16 @@
+Peringkat,Fitur,Importance (%)
+1,Precipitable water [mm] for entire sounding,10.45
+2,K index,8.35
+3,SWEAT index,5.18
+4,Showalter index,4.96
+5,Cross totals index,4.11
+6,Level of Free Convection,4.06
+7,Lifted index,3.95
+8,Mean mixed layer potential temperature,3.87
+9,LIFT computed using virtual temperature,3.77
+10,LFCT using virtual temperature,3.64
+11,Pres [hPa] of the Lifted Condensation Level,3.61
+12,Mean mixed layer mixing ratio,3.53
+13,Totals totals index,3.52
+14,Temp [K] of the Lifted Condensation Level,3.41
+15,CINS using virtual temperature,3.33

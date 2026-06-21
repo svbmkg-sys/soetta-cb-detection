@@ -1,0 +1,4 @@
+model,best_f1_threshold,best_f1_validation_f1,best_csi_threshold,best_csi_validation_csi,operational_threshold,operational_validation_pod,operational_validation_far,operational_validation_f1,operational_validation_accuracy,operational_note
+DNN,0.39,0.614853195164076,0.39,0.44389027431421446,0.46,0.75,0.4889589905362776,0.6078799249530957,0.7068723702664796,"Dipilih dari validation: POD >= 0.75, FAR minimum"
+1D-CNN,0.56,0.6275862068965518,0.56,0.457286432160804,0.61,0.7592592592592593,0.48264984227129337,0.6153846153846154,0.7124824684431977,"Dipilih dari validation: POD >= 0.75, FAR minimum"
+TCN,0.53,0.616695059625213,0.53,0.4458128078817734,0.58,0.7592592592592593,0.5015197568389058,0.6018348623853211,0.6956521739130435,"Dipilih dari validation: POD >= 0.75, FAR minimum"

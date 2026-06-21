@@ -1,0 +1,97 @@
+================================================================================
+BUILDING CB DETECTION DATASET
+================================================================================
+Using sheet 'Sheet1' from sounding_indices_96749_full.xlsx
+Sounding rows: 3550 -> 3012 after removing duplicate times
+Sounding period: 2020-01-01 12:00:00 to 2024-12-31 12:00:00
+Using sheet 'soetta_synop_2020_2024_june' from sinop_01.xlsx
+SYNOP rows: 43845
+SYNOP period: 2020-01-01 00:00:00 to 2024-12-31 23:00:00
+CB observed count:
+cb_observed
+False    39507
+True      4338
+Name: count, dtype: int64
+
+Label distribution for cb_h3:
+cb_h3
+0    2591
+1     421
+Name: count, dtype: int64
+
+Label distribution for cb_h6:
+cb_h6
+0    2370
+1     642
+Name: count, dtype: int64
+
+Label distribution for cb_h12:
+cb_h12
+0    1779
+1    1233
+Name: count, dtype: int64
+
+Total numeric candidate features: 29
+Selected features: 29
+Removed features due to missing > 40%: []
+
+Saved:
+D:\NITIB\ANFEB\data\processed\cb_dataset_tabular.csv
+D:\NITIB\ANFEB\data\processed\cb_dataset_tabular.xlsx
+D:\NITIB\ANFEB\data\processed\dataset_metadata.json
+
+Final dataset preview:
+  Station identifier  Station number Observation time  ...  cb_h3  cb_h6  cb_h12
+0               WIII           96749      200101/1200  ...      0      1       1
+1               WIII           96749      200102/0000  ...      0      0       1
+2               WIII           96749      200102/1200  ...      0      0       0
+3               WIII           96749      200103/0000  ...      1      1       1
+4               WIII           96749      200103/1200  ...      1      1       1
+
+[5 rows x 41 columns]
+
+Feature columns:
+- Station number
+- Station latitude
+- Station longitude
+- Station elevation
+- Showalter index
+- Lifted index
+- LIFT computed using virtual temperature
+- SWEAT index
+- K index
+- Cross totals index
+- Vertical totals index
+- Totals totals index
+- Convective Available Potential Energy
+- CAPE using virtual temperature
+- Convective Inhibition
+- CINS using virtual temperature
+- Equilibrum Level
+- Equilibrum Level using virtual temperature
+- Level of Free Convection
+- LFCT using virtual temperature
+- Bulk Richardson Number
+- Bulk Richardson Number using CAPV
+- Temp [K] of the Lifted Condensation Level
+- Pres [hPa] of the Lifted Condensation Level
+- Equivalent potential temp [K] of the LCL
+- Mean mixed layer potential temperature
+- Mean mixed layer mixing ratio
+- 1000 hPa to 500 hPa thickness
+- Precipitable water [mm] for entire sounding
+
+================================================================================
+EXPLORATORY DATA ANALYSIS
+================================================================================
+Saved: D:\NITIB\ANFEB\outputs\reports\eda_summary.txt
+Saved: D:\NITIB\ANFEB\outputs\reports\missing_value_report.csv
+Saved: D:\NITIB\ANFEB\outputs\reports\feature_descriptive_statistics.csv
+Saved: D:\NITIB\ANFEB\outputs\reports\yearly_label_distribution.csv
+Saved: D:\NITIB\ANFEB\outputs\reports\monthly_label_distribution.csv
+Saved: D:\NITIB\ANFEB\outputs\reports\feature_correlation_matrix.csv
+Saved: D:\NITIB\ANFEB\outputs\reports\feature_mean_by_cb_class.csv
+
+EDA completed.
+Figures saved to: D:\NITIB\ANFEB\outputs\figures
+Reports saved to: D:\NITIB\ANFEB\outputs\reports

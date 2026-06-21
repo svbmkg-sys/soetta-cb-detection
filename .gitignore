@@ -1,0 +1,29 @@
+# Environment
+.venv/
+venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Sensitive / raw / large files
+Dokumen/
+data/raw/
+
+# Optional intermediate large files
+data/interim/
+
+# Model artifacts
+outputs/models/
+*.h5
+*.keras
+*.pkl
+*.joblib
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Logs
+*.log

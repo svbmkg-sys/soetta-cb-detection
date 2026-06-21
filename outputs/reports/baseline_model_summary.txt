@@ -1,0 +1,53 @@
+BASELINE MODEL SUMMARY
+================================================================================
+
+Target: cb_h12
+Train years: [2020, 2021, 2022]
+Validation years: [2023]
+Test years: [2024]
+
+BASELINE DEFAULT TEST METRICS
+--------------------------------------------------------------------------------
+              model threshold_source  threshold  accuracy  precision  pod_recall      far  f1_score  specificity      csi      auc  tn  fp  fn  tp
+   Dummy Stratified     default_0_50        0.5  0.482085   0.401434    0.425856 0.598566  0.413284     0.524217 0.260465 0.475036 184 167 151 112
+Logistic Regression     default_0_50        0.5  0.716612   0.644951    0.752852 0.355049  0.694737     0.689459 0.532258 0.784987 242 109  65 198
+      Random Forest     default_0_50        0.5  0.721498   0.667883    0.695817 0.332117  0.681564     0.740741 0.516949 0.796242 260  91  80 183
+
+THRESHOLD RECOMMENDATIONS FROM VALIDATION
+--------------------------------------------------------------------------------
+              model  best_f1_threshold  best_f1_validation_f1  best_csi_threshold  best_csi_validation_csi  operational_threshold  operational_validation_pod  operational_validation_far  operational_validation_f1  operational_validation_accuracy                                                           operational_note
+   Dummy Stratified               0.10               0.362264                0.10                 0.221198                   0.10                    0.444444                    0.694268                   0.362264                         0.525947 Tidak ada threshold dengan POD validation >= 0.75; menggunakan F1 maksimum
+Logistic Regression               0.46               0.622517                0.46                 0.451923                   0.52                    0.759259                    0.507508                   0.597450                         0.690042                                        POD validation >= 0.75, FAR minimum
+      Random Forest               0.40               0.617886                0.40                 0.447059                   0.48                    0.759259                    0.500000                   0.602941                         0.697055                                        POD validation >= 0.75, FAR minimum
+
+FINAL TEST METRICS WITH VALIDATION THRESHOLD
+--------------------------------------------------------------------------------
+              model            threshold_source  threshold  accuracy  precision  pod_recall      far  f1_score  specificity      csi      auc  tn  fp  fn  tp
+   Dummy Stratified                default_0_50       0.50  0.482085   0.401434    0.425856 0.598566  0.413284     0.524217 0.260465 0.475036 184 167 151 112
+Logistic Regression                default_0_50       0.50  0.716612   0.644951    0.752852 0.355049  0.694737     0.689459 0.532258 0.784987 242 109  65 198
+      Random Forest                default_0_50       0.50  0.721498   0.667883    0.695817 0.332117  0.681564     0.740741 0.516949 0.796242 260  91  80 183
+   Dummy Stratified     best_f1_from_validation       0.10  0.482085   0.401434    0.425856 0.598566  0.413284     0.524217 0.260465 0.475036 184 167 151 112
+   Dummy Stratified    best_csi_from_validation       0.10  0.482085   0.401434    0.425856 0.598566  0.413284     0.524217 0.260465 0.475036 184 167 151 112
+   Dummy Stratified operational_from_validation       0.10  0.482085   0.401434    0.425856 0.598566  0.413284     0.524217 0.260465 0.475036 184 167 151 112
+Logistic Regression     best_f1_from_validation       0.46  0.731270   0.649390    0.809886 0.350610  0.720812     0.672365 0.563492 0.784987 236 115  50 213
+Logistic Regression    best_csi_from_validation       0.46  0.731270   0.649390    0.809886 0.350610  0.720812     0.672365 0.563492 0.784987 236 115  50 213
+Logistic Regression operational_from_validation       0.52  0.716612   0.652921    0.722433 0.347079  0.685921     0.712251 0.521978 0.784987 250 101  73 190
+      Random Forest     best_f1_from_validation       0.40  0.710098   0.619718    0.836502 0.380282  0.711974     0.615385 0.552764 0.796242 216 135  43 220
+      Random Forest    best_csi_from_validation       0.40  0.710098   0.619718    0.836502 0.380282  0.711974     0.615385 0.552764 0.796242 216 135  43 220
+      Random Forest operational_from_validation       0.48  0.728013   0.663265    0.741445 0.336735  0.700180     0.717949 0.538674 0.796242 252  99  68 195
+
+RANKING
+--------------------------------------------------------------------------------
+              model            threshold_source  threshold  accuracy  precision  pod_recall      far  f1_score  specificity      csi      auc  tn  fp  fn  tp
+Logistic Regression     best_f1_from_validation       0.46  0.731270   0.649390    0.809886 0.350610  0.720812     0.672365 0.563492 0.784987 236 115  50 213
+Logistic Regression    best_csi_from_validation       0.46  0.731270   0.649390    0.809886 0.350610  0.720812     0.672365 0.563492 0.784987 236 115  50 213
+      Random Forest     best_f1_from_validation       0.40  0.710098   0.619718    0.836502 0.380282  0.711974     0.615385 0.552764 0.796242 216 135  43 220
+      Random Forest    best_csi_from_validation       0.40  0.710098   0.619718    0.836502 0.380282  0.711974     0.615385 0.552764 0.796242 216 135  43 220
+      Random Forest operational_from_validation       0.48  0.728013   0.663265    0.741445 0.336735  0.700180     0.717949 0.538674 0.796242 252  99  68 195
+Logistic Regression                default_0_50       0.50  0.716612   0.644951    0.752852 0.355049  0.694737     0.689459 0.532258 0.784987 242 109  65 198
+Logistic Regression operational_from_validation       0.52  0.716612   0.652921    0.722433 0.347079  0.685921     0.712251 0.521978 0.784987 250 101  73 190
+      Random Forest                default_0_50       0.50  0.721498   0.667883    0.695817 0.332117  0.681564     0.740741 0.516949 0.796242 260  91  80 183
+   Dummy Stratified                default_0_50       0.50  0.482085   0.401434    0.425856 0.598566  0.413284     0.524217 0.260465 0.475036 184 167 151 112
+   Dummy Stratified     best_f1_from_validation       0.10  0.482085   0.401434    0.425856 0.598566  0.413284     0.524217 0.260465 0.475036 184 167 151 112
+   Dummy Stratified    best_csi_from_validation       0.10  0.482085   0.401434    0.425856 0.598566  0.413284     0.524217 0.260465 0.475036 184 167 151 112
+   Dummy Stratified operational_from_validation       0.10  0.482085   0.401434    0.425856 0.598566  0.413284     0.524217 0.260465 0.475036 184 167 151 112

@@ -1,0 +1,26 @@
+,missing_count,missing_percent
+Equilibrum Level,269,8.930942895086321
+Equilibrum Level using virtual temperature,240,7.968127490039841
+Level of Free Convection,109,3.618857901726428
+LFCT using virtual temperature,80,2.6560424966799467
+Bulk Richardson Number,49,1.6268260292164674
+Bulk Richardson Number using CAPV,49,1.6268260292164674
+K index,42,1.394422310756972
+Showalter index,41,1.3612217795484727
+SWEAT index,41,1.3612217795484727
+Cross totals index,41,1.3612217795484727
+Vertical totals index,41,1.3612217795484727
+Totals totals index,41,1.3612217795484727
+1000 hPa to 500 hPa thickness,40,1.3280212483399734
+LIFT computed using virtual temperature,37,1.2284196547144755
+Lifted index,37,1.2284196547144755
+Convective Available Potential Energy,16,0.5312084993359893
+CINS using virtual temperature,16,0.5312084993359893
+Convective Inhibition,16,0.5312084993359893
+CAPE using virtual temperature,16,0.5312084993359893
+Pres [hPa] of the Lifted Condensation Level,16,0.5312084993359893
+Temp [K] of the Lifted Condensation Level,16,0.5312084993359893
+Equivalent potential temp [K] of the LCL,16,0.5312084993359893
+Precipitable water [mm] for entire sounding,13,0.4316069057104913
+Mean mixed layer mixing ratio,3,0.099601593625498
+Mean mixed layer potential temperature,2,0.06640106241699867

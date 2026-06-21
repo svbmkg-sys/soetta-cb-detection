@@ -1,0 +1,13 @@
+MODEL EVALUATION SUMMARY
+================================================================================
+
+Target label: cb_h12
+Train years: [2020, 2021, 2022]
+Validation years: [2023]
+Test years: [2024]
+Sequence window: 3
+
+ model  accuracy  pod_recall      far  f1_score      auc  tn  fp  fn  tp  threshold
+   DNN  0.701954    0.619772 0.337398  0.640472 0.777740 268  83 100 163        0.5
+1D-CNN  0.688925    0.790875 0.395349  0.685338 0.755484 215 136  55 208        0.5
+   TCN  0.687296    0.756654 0.391437  0.674576 0.764887 223 128  64 199        0.5

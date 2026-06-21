@@ -1,0 +1,4 @@
+window,train_samples,val_samples,test_samples,timesteps,n_features
+3,1683,713,614,3,25
+5,1681,713,614,5,25
+7,1679,713,614,7,25

@@ -1,0 +1,26 @@
+FINAL MODEL COMPARISON SUMMARY
+================================================================================
+
+Selected final models:
+        group               model                                                 configuration        threshold_source  threshold  accuracy  precision  pod_recall      far  f1_score  specificity      csi      auc  tn  fp  fn  tp
+     Baseline    Dummy Stratified                              Dummy stratified, threshold 0.50            default_0_50       0.50  0.482085   0.401434    0.425856 0.598566  0.413284     0.524217 0.260465 0.475036 184 167 151 112
+     Baseline Logistic Regression       Logistic Regression, threshold selected from validation best_f1_from_validation       0.46  0.731270   0.649390    0.809886 0.350610  0.720812     0.672365 0.563492 0.784987 236 115  50 213
+     Baseline       Random Forest             Random Forest, threshold selected from validation best_f1_from_validation       0.40  0.710098   0.619718    0.836502 0.380282  0.711974     0.615385 0.552764 0.796242 216 135  43 220
+Deep Learning                 DNN               DNN tabular, threshold selected from validation best_f1_from_validation       0.39  0.718241   0.646104    0.756654 0.353896  0.697023     0.689459 0.534946 0.777740 242 109  64 199
+Deep Learning           1D-CNN_w7 1D-CNN, sequence window 7, threshold selected from validation best_f1_from_validation       0.61  0.690554   0.607670    0.783270 0.392330  0.684385     0.621083 0.520202 0.743633 218 133  57 206
+Deep Learning              TCN_w5    TCN, sequence window 5, threshold selected from validation best_f1_from_validation       0.40  0.688925   0.604651    0.790875 0.395349  0.685338     0.612536 0.521303 0.761410 215 136  55 208
+
+Ranking by F1-score, AUC, and POD:
+        group               model                                                 configuration        threshold_source  threshold  accuracy  precision  pod_recall      far  f1_score  specificity      csi      auc  tn  fp  fn  tp
+     Baseline Logistic Regression       Logistic Regression, threshold selected from validation best_f1_from_validation       0.46  0.731270   0.649390    0.809886 0.350610  0.720812     0.672365 0.563492 0.784987 236 115  50 213
+     Baseline       Random Forest             Random Forest, threshold selected from validation best_f1_from_validation       0.40  0.710098   0.619718    0.836502 0.380282  0.711974     0.615385 0.552764 0.796242 216 135  43 220
+Deep Learning                 DNN               DNN tabular, threshold selected from validation best_f1_from_validation       0.39  0.718241   0.646104    0.756654 0.353896  0.697023     0.689459 0.534946 0.777740 242 109  64 199
+Deep Learning              TCN_w5    TCN, sequence window 5, threshold selected from validation best_f1_from_validation       0.40  0.688925   0.604651    0.790875 0.395349  0.685338     0.612536 0.521303 0.761410 215 136  55 208
+Deep Learning           1D-CNN_w7 1D-CNN, sequence window 7, threshold selected from validation best_f1_from_validation       0.61  0.690554   0.607670    0.783270 0.392330  0.684385     0.621083 0.520202 0.743633 218 133  57 206
+     Baseline    Dummy Stratified                              Dummy stratified, threshold 0.50            default_0_50       0.50  0.482085   0.401434    0.425856 0.598566  0.413284     0.524217 0.260465 0.475036 184 167 151 112
+
+Key findings:
+- Best F1-score: Logistic Regression with F1 = 0.7208
+- Best AUC: Random Forest with AUC = 0.7962
+- Best POD/Recall: Random Forest with POD = 0.8365
+- Lowest FAR: Logistic Regression with FAR = 0.3506

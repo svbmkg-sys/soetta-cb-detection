@@ -1,0 +1,6 @@
+n_rows: 3012
+n_features: 25
+period_start: 2020-01-01 12:00:00
+period_end: 2024-12-31 12:00:00
+target: cb_h12
+target_distribution: {0: 1779, 1: 1233}

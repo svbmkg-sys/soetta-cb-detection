@@ -1,0 +1,7 @@
+Kelompok,Model,Konfigurasi,Threshold,Accuracy (%),POD / Recall (%),FAR (%),F1-score (%),CSI (%),AUC (%),TN,FP,FN,TP
+Baseline,Dummy Stratified,"Dummy stratified, threshold 0.50",0.5,48.21,42.59,59.86,41.33,26.05,47.5,184,167,151,112
+Baseline,Logistic Regression,"Logistic Regression, threshold selected from validation",0.46,73.13,80.99,35.06,72.08,56.35,78.5,236,115,50,213
+Baseline,Random Forest,"Random Forest, threshold selected from validation",0.4,71.01,83.65,38.03,71.2,55.28,79.62,216,135,43,220
+Deep Learning,DNN,"DNN tabular, threshold selected from validation",0.39,71.82,75.67,35.39,69.7,53.49,77.77,242,109,64,199
+Deep Learning,1D-CNN_w7,"1D-CNN, sequence window 7, threshold selected from validation",0.61,69.06,78.33,39.23,68.44,52.02,74.36,218,133,57,206
+Deep Learning,TCN_w5,"TCN, sequence window 5, threshold selected from validation",0.4,68.89,79.09,39.53,68.53,52.13,76.14,215,136,55,208

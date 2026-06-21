@@ -1,0 +1,36 @@
+THRESHOLD SELECTION FROM VALIDATION SET
+================================================================================
+
+Threshold dipilih menggunakan data validasi tahun 2023.
+Threshold terpilih kemudian diterapkan pada data uji tahun 2024.
+Dengan cara ini, data uji tidak digunakan untuk memilih threshold.
+
+REKOMENDASI THRESHOLD DARI VALIDATION
+--------------------------------------------------------------------------------
+ model  best_f1_threshold  best_f1_validation_f1  best_csi_threshold  best_csi_validation_csi  operational_threshold  operational_validation_pod  operational_validation_far  operational_validation_f1  operational_validation_accuracy                                  operational_note
+   DNN               0.39               0.614853                0.39                 0.443890                   0.46                    0.750000                    0.488959                   0.607880                         0.706872 Dipilih dari validation: POD >= 0.75, FAR minimum
+1D-CNN               0.56               0.627586                0.56                 0.457286                   0.61                    0.759259                    0.482650                   0.615385                         0.712482 Dipilih dari validation: POD >= 0.75, FAR minimum
+   TCN               0.53               0.616695                0.53                 0.445813                   0.58                    0.759259                    0.501520                   0.601835                         0.695652 Dipilih dari validation: POD >= 0.75, FAR minimum
+
+HASIL FINAL PADA TEST SET 2024
+--------------------------------------------------------------------------------
+ model            threshold_source  threshold  accuracy  precision  pod_recall      far  f1_score  specificity      csi      auc  tn  fp  fn  tp
+   DNN                default_0_50       0.50  0.701954   0.662602    0.619772 0.337398  0.640472     0.763533 0.471098 0.777740 268  83 100 163
+   DNN     best_f1_from_validation       0.39  0.718241   0.646104    0.756654 0.353896  0.697023     0.689459 0.534946 0.777740 242 109  64 199
+   DNN    best_csi_from_validation       0.39  0.718241   0.646104    0.756654 0.353896  0.697023     0.689459 0.534946 0.777740 242 109  64 199
+   DNN operational_from_validation       0.46  0.710098   0.656827    0.676806 0.343173  0.666667     0.735043 0.500000 0.777740 258  93  85 178
+1D-CNN                default_0_50       0.50  0.688925   0.604651    0.790875 0.395349  0.685338     0.612536 0.521303 0.755484 215 136  55 208
+1D-CNN     best_f1_from_validation       0.56  0.684039   0.616162    0.695817 0.383838  0.653571     0.675214 0.485411 0.755484 237 114  80 183
+1D-CNN    best_csi_from_validation       0.56  0.684039   0.616162    0.695817 0.383838  0.653571     0.675214 0.485411 0.755484 237 114  80 183
+1D-CNN operational_from_validation       0.61  0.692182   0.644531    0.627376 0.355469  0.635838     0.740741 0.466102 0.755484 260  91  98 165
+   TCN                default_0_50       0.50  0.687296   0.608563    0.756654 0.391437  0.674576     0.635328 0.508951 0.764887 223 128  64 199
+   TCN     best_f1_from_validation       0.53  0.695440   0.625000    0.722433 0.375000  0.670194     0.675214 0.503979 0.764887 237 114  73 190
+   TCN    best_csi_from_validation       0.53  0.695440   0.625000    0.722433 0.375000  0.670194     0.675214 0.503979 0.764887 237 114  73 190
+   TCN operational_from_validation       0.58  0.710098   0.661597    0.661597 0.338403  0.661597     0.746439 0.494318 0.764887 262  89  89 174
+
+Catatan:
+- default_0_50 adalah threshold standar 0.50.
+- best_f1_from_validation menggunakan threshold dengan F1-score tertinggi pada validation.
+- best_csi_from_validation menggunakan threshold dengan CSI tertinggi pada validation.
+- operational_from_validation memilih threshold dengan POD validation >= 0.75 dan FAR minimum.
+- Jika tidak ada threshold yang memenuhi POD >= 0.75, digunakan threshold dengan F1-score tertinggi.
